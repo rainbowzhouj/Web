@@ -1,1 +1,20 @@
 ## Web自动化学习
+- Selenium的安装
+    - 下载selenium的包，如pip方式
+    - 安装driver，配置环境变量
+- Selenium IDE的录制
+    - 适用于新手,下载后直接开始录制使用
+    - 一般用火狐较多，谷歌浏览器受网络限制
+    - 管理用例suites、代码导出
+- Selenium测试用例的编写
+    - 导入selenium，利用setup方法启动浏览器，设置窗口大小与隐式等待时间
+    - 撰写需要验证的case，利用xpath与css等方式进行元素定位，并操作
+    - 利用teardown方法进行退出
+- 隐式等待与显示等待
+    - 等待的目的是为了防止由于网络原因导致的页面加载元素不出的情况出现
+    - 等待的方法
+        - 强制等待，time.sleep(1)
+        - 隐式等待，driver.implicitly_wait()
+        - 显示等待,WebDrvierWait().until()
+- 等待的使用
+    -  多用显示等待，尽量不用隐式等待与强制等待
