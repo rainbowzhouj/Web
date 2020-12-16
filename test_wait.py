@@ -11,6 +11,7 @@ class TestWait():
         self.driver.get("https://search.data4industry.com/")
         # 隐式等待
         self.driver.implicitly_wait(3)
+        self.driver.maximize_window()
 
     def test_wait(self):
         self.driver.find_element_by_class_name("searchBox").send_keys("化工原料")
