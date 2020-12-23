@@ -18,3 +18,20 @@
         - 显示等待,WebDrvierWait().until()
 - 等待的使用
     -  多用显示等待，尽量不用隐式等待与强制等待
+- web控件定位为常见操作
+    - 常见的定位方式分xpath与CSS_selecter
+        -   xpath用法
+            - $x('//*[@id="kw"]')  定位百度搜索页面的元素
+            - $x('//*[@id="u"]/a[1]')  /为子元素
+            - $x('//*[@name="su"]//a')  //为子孙元素
+            - $x('//*[@id="s_tab"]//a[1]')
+            - $x('//*[@id="s_tab"]//a[last()-1]')
+        - css用法
+            - $('#wd')
+            - $('[name=wd]')
+            - $('#s_tab>b')
+            - $('#s_tab a:nth-child(2)')
+            - $('#s_tab>a:nth-last-child(2)')  空格为子孙，>为子元素
+- web控件的交互进阶
+    - ActionChains：执行PC端鼠标点击，双级，右键，拖拽等事件
+    - TouchActions：模拟PC端和移动端的点击，滑动、拖拽，多点触控等多种手势操作
