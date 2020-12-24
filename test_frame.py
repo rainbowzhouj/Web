@@ -1,3 +1,5 @@
+from time import sleep
+
 from base import Base
 import pytest
 
@@ -10,3 +12,5 @@ class TestFrame(Base):
         #self.driver.switch_to.parent_frame()
         self.driver.switch_to.default_content()
         print(self.driver.find_element_by_id("submitBTN").text)
+        sleep(3)
+
