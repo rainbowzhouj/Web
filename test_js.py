@@ -36,3 +36,4 @@ class TestJS(Base):
         self.driver.execute_script("document.getElementById('train_date').value='2020-12-30'")
         time.sleep(3)
         print(self.driver.execute_script("return document.getElementById('train_date').value"))
+
